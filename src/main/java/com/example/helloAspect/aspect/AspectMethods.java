@@ -31,13 +31,13 @@ import org.springframework.stereotype.Component;
 
     @Around("execution(* Employee.throwException())")
     public void employeeAroundExceptionAdvice(ProceedingJoinPoint proceedingJoinPoint) {
-        System.out.println("Before throwException");
+    
         try {
             proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             System.out.println(throwable.getMessage());
         }
-        System.out.println("After throwException");
+        
 
     }
 }
