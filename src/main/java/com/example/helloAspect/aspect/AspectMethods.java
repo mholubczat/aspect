@@ -21,16 +21,16 @@ import org.springframework.stereotype.Component;
     }
 
     @Pointcut("execution(* setName(*))")
-    public void SetNamePointcut() {
+    public void setNamePointcut() {
     }
 
     @After("SetNamePointcut()")
-    public void SetNamePointcut(JoinPoint joinPoint) {
+    public void setNamePointcut(JoinPoint joinPoint) {
         System.out.println("New name");
     }
 
     @Around("execution(* Employee.throwException())")
-    public void employeeAroundExceptionAdvice(ProceedingJoinPoint proceedingJoinPoint) {
+    public void employeeExceptionAdvice(ProceedingJoinPoint proceedingJoinPoint) {
     
         try {
             proceedingJoinPoint.proceed();
