@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
     public void setNamePointcut() {
     }
 
-    @After("SetNamePointcut()")
+    @After("setNamePointcut()")
     public void setNamePointcut(JoinPoint joinPoint) {
         System.out.println("New name");
     }
